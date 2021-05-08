@@ -27,12 +27,8 @@ $datactg = mysqli_query($conn, "SELECT * FROM category");
             </a>
         </div>
     </nav>
-    <br>
 
-    <section>
-        <h2 class="text-center">Data Category</h2>
-    </section>
-    <br>
+
     <div class="row">
 
         <div class="col-md-2">
@@ -47,6 +43,10 @@ $datactg = mysqli_query($conn, "SELECT * FROM category");
         </div>
         <div class="col-md-10">
 
+            <section>
+                <h2 class="text-center">Data Category</h2>
+            </section>
+            <br>
             <div class="container">
                 <a href="tbhctg.php" class="btn btn-primary">Tambah</a>
                 <table class="table" style="text-align: center;" border="1">

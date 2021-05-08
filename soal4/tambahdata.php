@@ -34,7 +34,7 @@ if (isset($_POST['tambah'])) {
             $masuk = mysqli_query($conn, "INSERT INTO books VALUES (NULL,'$nama','$stok', '$xx', '$des', '$jns')");
 
             if ($masuk) {
-                echo 'berhasil';
+                echo '<script>alert("Buku berhasil di Tambahkan!");  window.location.href="databuku.php";</script>';
             } else {
                 echo 'gagal di tambahkan';
             }

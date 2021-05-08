@@ -27,12 +27,9 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
             </a>
         </div>
     </nav>
-    <br>
 
-    <section>
-        <h2 class="text-center">Data Buku</h2>
-    </section>
-    <br>
+
+
 
     <div class="row">
 
@@ -47,7 +44,10 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
             </div>
         </div>
         <div class="col-md-10">
-
+            <section>
+                <h2 class="text-center">Data Buku</h2>
+            </section>
+            <br>
             <div class="container">
                 <a href="tambahdata.php" class="btn btn-primary">Tambah</a>
                 <table class="table" style="text-align: center;" border="1" width="100%">
@@ -71,7 +71,7 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
                                 <td><?= $bok['namebook']; ?></td>
                                 <td><?= $bok['stok']; ?></td>
                                 <td>
-                                    <a href="hapusbuku.php"><img src="img/remove (2).png" alt=""></a>
+                                    <a href="hapusbuku.php?id=<?= $bok['idbook']; ?>" onclick="return confirm('kamu yakin mau menghapus buku ini?');"><img src="img/remove (2).png" alt=""></a>
                                     <a href="editbuku.php?id=<?= $bok['idbook']; ?>"><img src="img/edit.png" alt=""></a>
                                 </td>
                                 <td><a href="detail.php?id=<?= $bok['idbook']; ?>" class="btn btn-success">Detail</a></td>
