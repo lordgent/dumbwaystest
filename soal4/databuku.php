@@ -33,6 +33,7 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
         <h2 class="text-center">Data Buku</h2>
     </section>
     <br>
+
     <div class="row">
 
         <div class="col-md-2">
@@ -48,15 +49,15 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
         <div class="col-md-10">
 
             <div class="container">
-                <a href="tbhctg.php" class="btn btn-primary">Tambah</a>
-                <table class="table" style="text-align: center;" border="1">
+                <a href="tambahdata.php" class="btn btn-primary">Tambah</a>
+                <table class="table" style="text-align: center;" border="1" width="100%">
                     <thead class="thead-dark">
                         <tr>
                             <th scope="col">No</th>
-                            <th scope="col">Nama Category</th>
+                            <th scope="col">Buku</th>
                             <th scope="col">Stok</th>
-                            <th scope="col">Configuration</th>
-                            <th scope="col">Detail Book</th>
+                            <th scope="col">Config</th>
+                            <th scope="col">Info</th>
 
                         </tr>
                     </thead>
@@ -73,7 +74,7 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
                                     <a href="hapusctg.php"><img src="img/remove (2).png" alt=""></a>
                                     <a href="editctg.php"><img src="img/edit.png" alt=""></a>
                                 </td>
-                                <td><a href="" class="btn btn-success">Detail</a></td>
+                                <td><a href="detail.php?id=<?= $bok['idbook']; ?>" class="btn btn-success">Detail</a></td>
 
                             </tr>
                             <?php $i++; ?>

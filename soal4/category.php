@@ -67,8 +67,8 @@ $datactg = mysqli_query($conn, "SELECT * FROM category");
                                 <th scope="row"><?= $i; ?></th>
                                 <td><?= $cg['namactg']; ?></td>
                                 <td>
-                                    <a href="hapusctg.php"><img src="img/remove (2).png" alt=""></a>
-                                    <a href="editctg.php"><img src="img/edit.png" alt=""></a>
+                                    <a href="hapusctg.php?id=<?= $cg['idctg']; ?>"" onclick=" return confirm('kamu yakin mau hapus?');"><img src="img/remove (2).png" alt=""></a>
+                                    <a href="editctg.php?id=<?= $cg['idctg']; ?>"><img src="img/edit.png" alt="gmbr"></a>
                                 </td>
 
                             </tr>
