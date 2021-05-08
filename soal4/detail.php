@@ -19,6 +19,7 @@ $det = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON books.idc
         .detail {
             justify-content: center;
             text-align: center;
+
         }
     </style>
 </head>
@@ -38,10 +39,10 @@ $det = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON books.idc
         <div class="detail">
             <?php foreach ($det as $da) :  ?>
                 <img src="img/<?= $da['image']; ?>" alt="gambar">
-                <h4>Judul: <?= $da['namebook']; ?></h4>
-                <p>Jumlah Stok: <?= $da['stok']; ?> </p>
-                <p>Deskripsi : <?= $da['deskripsi']; ?> </p>
-                <p>Jenis : <?= $da['namactg']; ?> </p>
+                <h4>Judul Buku: <br> <?= $da['namebook']; ?></h4>
+                <p> Jumlah Stok: <br> <b> <?= $da['stok']; ?> </b></p>
+                <p> Deskripsi : <br> <b><?= $da['deskripsi']; ?> </b> </p>
+                <p>Jenis : <br> <b> <?= $da['namactg']; ?> </b> </p>
                 <a href="databuku.php" class="btn btn-success">kembali</a>
         </div>
     <?php endforeach; ?>

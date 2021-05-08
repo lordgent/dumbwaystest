@@ -71,8 +71,8 @@ $databook = mysqli_query($conn, "SELECT * FROM books INNER JOIN category ON book
                                 <td><?= $bok['namebook']; ?></td>
                                 <td><?= $bok['stok']; ?></td>
                                 <td>
-                                    <a href="hapusctg.php"><img src="img/remove (2).png" alt=""></a>
-                                    <a href="editctg.php"><img src="img/edit.png" alt=""></a>
+                                    <a href="hapusbuku.php"><img src="img/remove (2).png" alt=""></a>
+                                    <a href="editbuku.php?id=<?= $bok['idbook']; ?>"><img src="img/edit.png" alt=""></a>
                                 </td>
                                 <td><a href="detail.php?id=<?= $bok['idbook']; ?>" class="btn btn-success">Detail</a></td>
 
